@@ -1,0 +1,37 @@
+@media only screen and (min-width: 600px) {
+    .hamburger, #toggle {
+        display: none;
+    }
+
+    header {
+        height: 7rem;
+    }
+
+    nav ul.nav_ul li.nav_ul{
+        height: 3rem;
+        list-style: none;
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+
+    /* #toggle:checked ~ ul.nav_ul, #toggle:unchecked ~ ul.nav_ul,  */
+    nav ul.nav_ul{
+        min-height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    /* #toggle:checked ~ ul.nav_ul li, #toggle:unchecked ~ ul.nav_ul li,  */
+    ul.nav_ul li{
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+/* * * * * * * * * * * * IMAGES * * * * * * * * * * */
+img.profile-image {
+    max-width: 20rem;
+}
+
+
+  }
