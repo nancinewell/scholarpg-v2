@@ -6,46 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ScholaRPG</title>
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/large.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/large.css">
 </head>
 <body>
+    <script src="js/bossBattle.js"></script>
     <header>
-        <h1>SCHOLARPG</h1>
+        <h1>S<span class="logo-lower-case">CHOLA</span>RPG</h1>
         <nav>
-            <a id="profile-icon" href="/profile">&#9786;</a>
+            <!-- <a id="profile-icon" href="/profile">&#9786;</a> -->
             <label for="toggle" class="hamburger">☰</label>
             <input type="checkbox" id="toggle">
             <ul class="nav_ul">
-                    
                 <li class="nav_ul">
                     <a href="/">Home</a>
                 </li>
-                <li class="nav_ul">
-                    <a href="/">Tools</a>
-                </li>
-                <li class="nav_ul">
-                    <a href="/">Quests</a>
-                </li>
-                <li class="nav_ul">
-                    <a href="/">Settings</a>
-                </li>
-                
-                <!-- <li class="nav_ul">
-                    <a class="<%= path==='/cart' ? 'active':'' %>" href='/cart'>Cart</a>
-                </li>
-                <li class="nav_ul">
-                    <a class="<%= path==='/orders' ? 'active':'' %>" href='/orders'>Orders</a>
-                </li>
-               <li class="nav_ul">
-                    <a class="<%= path==='/admin/add-product' ? 'active':'' %>" href="/admin/add-product">Add Product</a>
-                </li>
-                <li class="nav_ul">
-                    <a class="<%= path==='/admin/products' ? 'active':'' %>" href="/admin/products">Admin Products</a>
-                </li> -->
-                
             </ul>
         </nav>
     </header>
+    <main>
+        <h1 id="boss-battle-h1">Boss Battle!</h1>
+        <div id="choose-div">
+            <div class="choose-team">
+                <h2>Choose a Team</h2>
+                <select class="form-control" id="select-team">
+                    <!-- <option value="">Select One</option> -->
+                    <option>Mystics</option>
+                    <option>Blue Dragons</option>
+                    <option>Bunnicorns</option>
+                </select>
+            </div>
+            
+            <div class="choose-questions">
+                <h2>Choose Which Question Set</h2>
+                <select class="form-control" id="select-questions">
+                    <!-- <option value="">Select One</option> -->
+                    <option value="geo1">Geography 1</option>
+                    <option value="lit1">Literature 1</option>
+                    <option value="lit2">Literature 2</option>
+                </select>
+            </div>
+            <button class="submit-btn" onclick="startBattle()">Commence Battle!</button>
+        </div>
+        <div id="display-div">
+            <img id="explosion-monster" src="img/explosions/1.1.png">
+            <img id="explosion-player" src="img/explosions/6.1.png">
+        </div>
+        <div id="question-div">
+            <p id="question-div-text"></p>
+            <div id="question-btns"></div>
+            
+        </div>
+    </main>
+    
 </body>
 </html>
