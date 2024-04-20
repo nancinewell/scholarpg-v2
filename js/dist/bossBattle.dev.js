@@ -28,7 +28,21 @@ gameschoolTeam = {
 }; // * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
 
 geo1 = {
-  qa: [["What is the Lithosphere?", "the portion of the earth that is land"], ["What is a Valley?", "lowland between hills or mountains"], ["What is a Canyon?", "a deep, narrow valley with steep walls"], ["What is Erosion?", "the wearing away of the earth's soil and rock from rain, snow, ice, and wind"], ["What is Topography?", "land distinguished by its elevation"], ["What is a Mountain?", "high, rocky land, usually with steep sides and a pointed or rounded top, higher than a hill"], ["What is a Mountain Range?", "a group of mountains bordered by lowlands"], ["What is a Volcano?", "a mountain formed of rock or ash thrown up from inside the earth"], ["What is a Plateau?", "a region that is mostly high and flat"], ["What is a Hill?", "a raised part of the earth's surface, with sloping slides; smaller than a mountain"], ["What is a Plain?", "broad, level land"], ["What is a Valley?", "lowland between hills or mountains"], ["What is a Basin?", "a region drained by a river; land largely enclosed by higher land"], ["What is a Canyon?", "a deep, narrow valley with steep walls"], ["What is a Cliff?", "a high, steep wall of rock"], ["What is a Rift?", "a long, steep valley formed by the dropping or slipping of a block of the earth's crust during an earthquake"]]
+  qa: [["What is the Lithosphere?", "the portion of the earth that is land"], ["What is a Valley?", "lowland between hills or mountains"], ["What is a Canyon?", "a deep, narrow valley with steep walls"], ["What is Erosion?", "the wearing away of the earth's soil and rock from rain, snow, ice, and wind"]
+  /*,
+  ["What is Topography?","land distinguished by its elevation"],
+  ["What is a Mountain?","high, rocky land, usually with steep sides and a pointed or rounded top, higher than a hill"],
+  ["What is a Mountain Range?","a group of mountains bordered by lowlands"],
+  ["What is a Volcano?","a mountain formed of rock or ash thrown up from inside the earth"],
+  ["What is a Plateau?","a region that is mostly high and flat"],
+  ["What is a Hill?","a raised part of the earth's surface, with sloping slides; smaller than a mountain"],
+  ["What is a Plain?","broad, level land"],
+  ["What is a Valley?","lowland between hills or mountains"],
+  ["What is a Basin?","a region drained by a river; land largely enclosed by higher land"],
+  ["What is a Canyon?","a deep, narrow valley with steep walls"],
+  ["What is a Cliff?","a high, steep wall of rock"],
+  ["What is a Rift?","a long, steep valley formed by the dropping or slipping of a block of the earth's crust during an earthquake"]*/
+  ]
 };
 lit1 = {};
 lit2 = {}; // * * * * * * * * * * * * * * * * * * * MONSTERS * * * * * * * * * * * * * * * * * * *
