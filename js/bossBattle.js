@@ -27,28 +27,90 @@ gameschoolTeam={
     shield: "2"
 }
 // * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
-geo1={
+geo1l3={
     qa: [
-        ["What is the Lithosphere?","the portion of the earth that is land"],
-        ["What is a Valley?","lowland between hills or mountains"],
-        ["What is a Canyon?","a deep, narrow valley with steep walls"],
-        ["What is Erosion?","the wearing away of the earth's soil and rock from rain, snow, ice, and wind"]/*,
-        ["What is Topography?","land distinguished by its elevation"],
-        ["What is a Mountain?","high, rocky land, usually with steep sides and a pointed or rounded top, higher than a hill"],
-        ["What is a Mountain Range?","a group of mountains bordered by lowlands"],
-        ["What is a Volcano?","a mountain formed of rock or ash thrown up from inside the earth"],
-        ["What is a Plateau?","a region that is mostly high and flat"],
-        ["What is a Hill?","a raised part of the earth's surface, with sloping slides; smaller than a mountain"],
-        ["What is a Plain?","broad, level land"],
-        ["What is a Valley?","lowland between hills or mountains"],
-        ["What is a Basin?","a region drained by a river; land largely enclosed by higher land"],
-        ["What is a Canyon?","a deep, narrow valley with steep walls"],
-        ["What is a Cliff?","a high, steep wall of rock"],
-        ["What is a Rift?","a long, steep valley formed by the dropping or slipping of a block of the earth's crust during an earthquake"]*/
+        ["What iscartography?","the study of making maps"],
+        ["What is geography?","a description of the earth and the people who live on it"],
+        ["What is mathematical geography?","a description of the earth and space using numbers and measurements"],
+        ["What is the earth's orbit?","the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once."],
+        ["What is the earth's axis?","a central, straight imaginary line about which the earth rotates. One rotation equals 1 day or 24 hours."]
     ]
 }
-lit1={}
-lit2={}
+geo1l5={
+    qa: [
+        ["What iscartography?","the study of making maps"],
+        ["What is geography?","a description of the earth and the people who live on it"],
+        ["What is mathematical geography?","a description of the earth and space using numbers and measurements"],
+        ["What is the earth's orbit?","the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once."],
+        ["What is the earth's axis?","a central, straight imaginary line about which the earth rotates. One rotation equals 1 day or 24 hours."],
+        ["What is shape (in geographical terms)?","the outline of an area or figure"],
+        ["What is form?","an object that is not flat but has height, width, and depth (three-dimensional)"],
+        ["What is a relief map?","a map or model that includes three-dimensional (3D) forms"]       
+    ]
+}
+geo1l6={
+    qa: [
+        ["What iscartography?","the study of making maps"],
+        ["What is geography?","a description of the earth and the people who live on it"],
+        ["What is mathematical geography?","a description of the earth and space using numbers and measurements"],
+        ["What is the earth's orbit?","the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once."],
+        ["What is the earth's axis?","a central, straight imaginary line about which the earth rotates. One rotation equals 1 day or 24 hours."],
+        ["What is shape (in geographical terms)?","the outline of an area or figure"],
+        ["What is form?","an object that is not flat but has height, width, and depth (three-dimensional)"],
+        ["What is a relief map?","a map or model that includes three-dimensional (3D) forms"],
+        ["What is a cloud?","a grouping of tiny water drops and/or ice crystals that float in the air"],
+        ["What is cirrus?","thin, wispy clouds found high in the sky"],
+        ["What is cirrocumulus?","small, rounded white puffs; clouds that form long rows in the sky"]
+        ["What is cumulus?","big, white puffy clouds"]
+        ["What is cumulonimbus?","large, gray cumulus clouds that are heavy with water"]
+        ["What is stratus?","low, flat clouds that bring rain or snow"]
+    ]
+}
+geo1l7={
+    qa: [
+        
+    ]
+}
+geo1l8={
+    qa: [
+        
+    ]
+}
+geo1l10={
+    qa: [
+        
+    ]
+}
+geo1l11={
+    qa: [
+        
+    ]
+}
+geo1l12={
+    qa: [
+        
+    ]
+}
+geo1l13={
+    qa: [
+        
+    ]
+}
+geo1l14={
+    qa: [
+        
+    ]
+}
+geo1l15={
+    qa: [
+        
+    ]
+}
+geo1l16={
+    qa: [
+        
+    ]
+}
 // * * * * * * * * * * * * * * * * * * * MONSTERS * * * * * * * * * * * * * * * * * * *
 const monsterNames=["Stormborn",
 "Thornscale Serpent",
