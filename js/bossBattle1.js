@@ -1749,7 +1749,7 @@ function startBattle() {
     
     //create and display monster image
     let monsterImg = appendElement("img","boss-battle-img", "monster-img");
-    monsterImg.src= "img/creatures/monsters/"+(monster+1)+".png";
+    monsterImg.src= "img/creatures/monsters/"+(monster+1)+".jpg";
     displayDiv.appendChild(monsterImg);
 
     //add VS
@@ -1775,7 +1775,7 @@ function startBattle() {
     
     //display team crest
     let teamCrest = appendElement("img", "boss-battle-img", "player-img");
-    teamCrest.src = "img/shields/"+teamSource+".png";
+    teamCrest.src = "img/shields/"+teamSource+".jpg";
     displayDiv.appendChild(teamCrest);
     
     // display monster name
@@ -1841,7 +1841,7 @@ function runGame(){
 
     //display avatar and name
     let playerImg = document.getElementById("player-img");
-    playerImg.src = "img/avatars/"+randomPlayer[1]+".png";
+    playerImg.src = "img/avatars/"+randomPlayer[1]+".jpg";
 
     let playerName = document.getElementById("team-name");
     playerName.innerHTML = randomPlayer[0];
@@ -2001,7 +2001,7 @@ function endGame(){
             let name = appendElement("h1", "boss-battle-name", "", player[0])
             winnerDiv.appendChild(name)
             let img = appendElement("img", "boss-battle-img")
-            img.src="img/avatars/"+player[1]+".png";
+            img.src="img/avatars/"+player[1]+".jpg";
             winnerDiv.appendChild(img);
 
             displayDiv.appendChild(winnerDiv);
