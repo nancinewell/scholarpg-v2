@@ -1,32 +1,33 @@
-// * * * * * * * * * * * * * * * * * * * GLOBALS * * * * * * * * * * * * * * * * * * *
-let bossHealth, team, teamMembers, questionSet, players, currentQuestion; 
+"use strict";
 
-// * * * * * * * * * * * * * * * * * * * TEAM INFO * * * * * * * * * * * * * * * * * * *
-geographyTeam={
-    name: "Blue Dragons",
-    members: [  ["Ashlyn", "bard-female-4"],
-                ["Adolyn", "archer-female-4"],
-                ["Eliana", "healer-female-6"]
-            ],
-    shield: "5"
-}
-literatureTeam={
-    name: "Bunnicorns",
-    members: [  ["Ephraim", "healer-male-10"],
-                ["Eleanor", "mage-female-6"],
-                ["Bob", "warrior-male-5"]
-            ],
-    shield: "3"
-}
-gameschoolTeam={
-    name: "Mystics",
-    members: [  ["Ethan", "archer-male-3"],
-                ["Emma", "bard-female-12"],
-                ["Gwen", "warrior-female-11"]
-            ],
-    shield: "2"
-}
-// * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+// * * * * * * * * * * * * * * * * * * * GLOBALS * * * * * * * * * * * * * * * * * * *
+var bossHealth, team, teamMembers, players, currentQuestion;
+var questionSet = []; // * * * * * * * * * * * * * * * * * * * TEAM INFO * * * * * * * * * * * * * * * * * * *
+
+geographyTeam = {
+  name: "Blue Dragons",
+  members: [["Ashlyn", "bard-female-4"], ["Adolyn", "archer-female-4"], ["Ellie", "mage-female-4"], ["Ephraim", "archer-male-4"], ["Eliana", "healer-female-6"]],
+  shield: "5"
+};
+literatureTeam = {
+  name: "Bunnicorns",
+  members: [["Ephraim", "healer-male-10"], ["Eleanor", "mage-female-6"], ["Bob", "warrior-male-5"]],
+  shield: "3"
+};
+gameschoolTeam = {
+  name: "Mystics",
+  members: [["Ethan", "archer-male-3"], ["Emma", "bard-female-12"], ["Gwen", "warrior-female-11"]],
+  shield: "2"
+}; // * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
+
 /*geo1l3={
     qa: [
         ["What iscartography?","the study of making maps"],
@@ -1176,403 +1177,757 @@ lit2l12={
         ["What is a slant rhyme?","Two words that look as if they should rhyme, but do not, or that sound close to being a rhyme, but are not."]
     ]}*/
 
-// * * * * * * * * * * * * * * * * * * * MONSTERS * * * * * * * * * * * * * * * * * * *
-const monsterNames=["Stormborn",
-"Thornscale Serpent",
-"Darkbloom",
-"Stonefury",
-"Frostfury",
-"Frostbite",
-"Nightmaw",
-"Ashenclaw Gargoyle",
-"Stone Hound",
-"Nightfury",
-"Winter Rose",
-"Frosthowl",
-"Shy Basilisk",
-"Stonewhisper",
-"Shadowthorn Basilisk",
-"Rainbow Lizard Dog",
-"Rainbow Frostfire",
-"Winter Ember",
-"Poisonlife",
-"Nightshade",
-"Spiny Poison",
-"Venomstalker",
-"Bloodmoon",
-"Cotton Candy Nightmare",
-"Flameshard",
-"Flame Blossom",
-"Flame Lizard",
-"Ironclaw",
-"Poison",
-"Ironfang Kraken",
-"Baby Sea Monster",
-"Fire Spirit",
-"Shy Emberthorne",
-"Emberclaw",
-"Nightstalkers",
-"Stormrider",
-"Thunderstrike",
-"Cotton Candy Beetle Blossom",
-"Sunburn",
-"Monster of the Seas",
-"Birdie Death",
-"Nightfall",
-"Shadowtalon",
-"Nightreaver"
-]
-// * * * * * * * * * * * * * * * * * * * START BATTLE * * * * * * * * * * * * * * * * * * *
+var qa = [{
+  "q": "What is cartography?",
+  "a": "the study of making maps",
+  "class": "geography1",
+  "lesson": 3
+}, {
+  "q": "What is geography?",
+  "a": "a description of the earth and the people who live on it",
+  "class": "geography1",
+  "lesson": 3
+}, {
+  "q": "What is mathematical geography?",
+  "a": "a description of the earth and space using numbers and measurements",
+  "class": "geography1",
+  "lesson": 3
+}, {
+  "q": "What is the earth's orbit?",
+  "a": "the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once.",
+  "class": "geography1",
+  "lesson": 3
+}, {
+  "q": "What is the earth's axis?",
+  "a": "a central, straight imaginary line about which the earth rotates. One rotation equals 1 day or 24 hours.",
+  "class": "geography1",
+  "lesson": 3
+}, {
+  "q": "What is shape?",
+  "a": "the outline of an area or figure",
+  "class": "geography1",
+  "lesson": 5
+}, {
+  "q": "What is form?",
+  "a": "an object that is not flat but has height, width, and depth (three-dimensional)",
+  "class": "geography1",
+  "lesson": 5
+}, {
+  "q": "What is a relief map?",
+  "a": "a map or model that includes three-dimensional (3D) forms",
+  "class": "geography1",
+  "lesson": 5
+}, {
+  "q": "What is a cloud?",
+  "a": "a grouping of tiny water drops and/or ice crystals that float in the air",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is cirrus",
+  "a": "thin, wispy clouds found high in the sky",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is cirrocumulus?",
+  "a": "small, rounded white puffs; clouds that form long rows in the sky",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is cumulus?",
+  "a": "big, white puffy clouds",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is cumulonimbus",
+  "a": "large, gray cumulus clouds that are heavy with water",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is stratus",
+  "a": "low, flat clouds that bring rain or snow",
+  "class": "geography1",
+  "lesson": 6
+}, {
+  "q": "What is atmosphere?",
+  "a": "the entire mass of fluid, air, and vapors surrounding the earth",
+  "class": "geography1",
+  "lesson": 7
+}, {
+  "q": "What is a climate?",
+  "a": "an average of the high and low temperatures in an area on the earth over a long period of time (about 30 years)",
+  "class": "geography1",
+  "lesson": 8
+}, {
+  "q": "What is weather?",
+  "a": "the condition of the atmosphere at any given moment",
+  "class": "geography1",
+  "lesson": 8
+}, {
+  "q": "What is the hydrosphere?",
+  "a": "all of the water contained on the earth; divided into two sections: oceanic waters and continental water",
+  "class": "geography1",
+  "lesson": 10
+}, {
+  "q": "What is a gulf?",
+  "a": "a large extension of an ocean or sea into the land",
+  "class": "geography1",
+  "lesson": 10
+}, {
+  "q": "What is a bay?",
+  "a": "a body of water smaller than a gulf that is nearly surrounded by land",
+  "class": "geography1",
+  "lesson": 10
+}, {
+  "q": "What is a fjord?",
+  "a": "a narrow inlet of the sea with steep banks made by a glacier",
+  "class": "geography1",
+  "lesson": 10
+}, {
+  "q": "What is a harbor?",
+  "a": "a part of an ocean or lake next to land that is protected and deep enough for ships to anchor",
+  "class": "geography1",
+  "lesson": 10
+}, {
+  "q": "What is a glacier?",
+  "a": "large body of slowly moving ice flowing downward from the mountains",
+  "class": "geography1",
+  "lesson": 11
+}, {
+  "q": "What is a river?",
+  "a": "large stream of water flowing through land",
+  "class": "geography1",
+  "lesson": 11
+}, {
+  "q": "What is a lake?",
+  "a": "large body of water surrounded by land",
+  "class": "geography1",
+  "lesson": 11
+}, {
+  "q": "What is a saltwater lake?",
+  "a": "lake which has water entering, but no outlet, so the water is salty",
+  "class": "geography1",
+  "lesson": 11
+}, {
+  "q": "What is a groundwater?",
+  "a": "he water found beneath the surface of the ground",
+  "class": "geography1",
+  "lesson": 12
+}, {
+  "q": "What is a channel?",
+  "a": "deep, narrow body of water connecting two larger bodies of water",
+  "class": "geography1",
+  "lesson": 12
+}, {
+  "q": "What is a lock?",
+  "a": "a device used for raising and lowering boats, ships, and other watercraft between stretches of water of different levels on rivers and canals",
+  "class": "geography1",
+  "lesson": 12
+}, {
+  "q": "What is a canal?",
+  "a": "a man-made ditch for transporting people and things",
+  "class": "geography1",
+  "lesson": 12
+}, {
+  "q": "What is a valley?",
+  "a": "lowland between hills or mountains",
+  "class": "geography1",
+  "lesson": 13
+}, {
+  "q": "What is a canyon?",
+  "a": "a deep, narrow valley with steep walls",
+  "class": "geography1",
+  "lesson": 13
+}, {
+  "q": "What is a mountain?",
+  "a": "high, rocky land, usually with steep sides and a pointed or rounded top, higher than a hill",
+  "class": "geography1",
+  "lesson": 14
+}, {
+  "q": "What is a hill?",
+  "a": "raised part of the earth’s surface, with sloping slides; smaller than a mountain",
+  "class": "geography1",
+  "lesson": 14
+}, {
+  "q": "What is a mountain range?",
+  "a": "mountain range —a group of mountains bordered by lowlands",
+  "class": "geography1",
+  "lesson": 14
+}, {
+  "q": "What is a divide?",
+  "a": "a height of land that separates river basins",
+  "class": "geography1",
+  "lesson": 14
+}, {
+  "q": "What is a beach?",
+  "a": "a narrow, gently sloping strip of land along the edge of a body of water",
+  "class": "geography1",
+  "lesson": 14
+}, {
+  "q": "What is a basin?",
+  "a": "an area of land drained by a river that is largely enclosed by higher land",
+  "class": "geography1",
+  "lesson": 15
+}, {
+  "q": "What is a plateau?",
+  "a": "region that is mostly high and flat",
+  "class": "geography1",
+  "lesson": 15
+}, {
+  "q": "What is a plain?",
+  "a": "broad, level land",
+  "class": "geography1",
+  "lesson": 15
+}, {
+  "q": "What is a island?",
+  "a": "a piece of land  entirely surrounded by water, smaller than a continent",
+  "class": "geography1",
+  "lesson": 15
+}, {
+  "q": "What is a volcano?",
+  "a": "an opening in the earth’s crust through which lava, volcanic ash, and gases escape",
+  "class": "geography1",
+  "lesson": 15
+}, {
+  "q": "What is a lava?",
+  "a": "molten rock on the earth’s surface",
+  "class": "geography1",
+  "lesson": 16
+}, {
+  "q": "What is a magma?",
+  "a": "molten rock within the earth",
+  "class": "geography1",
+  "lesson": 16
+}, {
+  "q": "What is a biome?",
+  "a": "a very large area of the earth’s surface that has a particular climate, soil, and elevation",
+  "class": "geography2",
+  "lesson": 2
+}, {
+  "q": "What is a tundra biome?",
+  "a": "the coldest biome with long, cold, dark winters",
+  "class": "geography2",
+  "lesson": 3
+}, {
+  "q": "What is a taiga biome?",
+  "a": "the largest biome with cold winters and warm, rainy summers",
+  "class": "geography2",
+  "lesson": 4
+}, {
+  "q": "What is a temperate rain forest?",
+  "a": "a wet and rainy biome that experiences all four seasons",
+  "class": "geography2",
+  "lesson": 5
+}, {
+  "q": "What is an alpine biome?",
+  "a": "a cold and windy biome in high mountains",
+  "class": "geography2",
+  "lesson": 6
+}, {
+  "q": "What is a chaparral biome?",
+  "a": "a biome with wet winters and long, dry summers",
+  "class": "geography2",
+  "lesson": 7
+}, {
+  "q": "What is a grassland bome?",
+  "a": "a biome with only enough rain for grasses and flowers, but few if any trees",
+  "class": "geography2",
+  "lesson": 8
+}, {
+  "q": "What is a deciduous forest biome?",
+  "a": "a biome with many deciduous trees that lose their leaves in the autumn and experiences all four seasons",
+  "class": "geography2",
+  "lesson": 9
+}, {
+  "q": "What is a desert biome?",
+  "a": "a very hot and dry biome with plants and animals that have often adapted to store water",
+  "class": "geography2",
+  "lesson": 10
+}, {
+  "q": "What is a tropical seasonal forest?",
+  "a": "a biome with a dry season and wet season",
+  "class": "geography2",
+  "lesson": 11
+}, {
+  "q": "What is a tropical rain forest?",
+  "a": "a warm biome with much rain and plants with large leaves",
+  "class": "geography2",
+  "lesson": 12
+}, {
+  "q": "What is an aquatic biome?",
+  "a": "a biome in varieties of water, such as swamps, marshes, rivers, lakes, and oceans",
+  "class": "geography2",
+  "lesson": 13
+}, {
+  "q": "What does it mean to migrate?",
+  "a": "to move from one region or habitat to another",
+  "class": "geography2",
+  "lesson": 14
+}, {
+  "q": "What does it mean to immigrate?",
+  "a": "the act of coming to live permanently in a foreign country",
+  "class": "geography2",
+  "lesson": 14
+}, {
+  "q": "What is a passport?",
+  "a": "an official government document given to a person by their government that lets government officials from other countries know your identity and your citizenship",
+  "class": "geography2",
+  "lesson": 15
+}, {
+  "q": "What is a census?",
+  "a": "an official count, or survey, of a population",
+  "class": "geography2",
+  "lesson": 16
+}, {
+  "q": "What is a population?",
+  "a": "the count of all of the people living in a specified area",
+  "class": "geography2",
+  "lesson": 16
+}, {
+  "q": "What is fiction?",
+  "a": "A made up or imaginary story.",
+  "class": "literature",
+  "lesson": 2
+}, {
+  "q": "What is nonfiction?",
+  "a": "Writing based on real life fact or information; not made up",
+  "class": "literature",
+  "lesson": 2
+}, {
+  "q": "What is historical fiction?",
+  "a": "A story that contains some real parts from history and some made up (or fictional) parts. The real parts may be places, events, or people. The fiction is something the author adds to make the story more interesting, including people, details, events, conversations, etc.",
+  "class": "literature",
+  "lesson": 2
+}, {
+  "q": "What is foreshadowing?",
+  "a": "To give clues or hints to suggest events that will occur later in the story, either good or bad.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is alliteration?",
+  "a": "The repetition of initial (or beginning) sounds of words.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is personification?",
+  "a": "A type of metaphor in which an idea, a thing, or an animal is given human characteristics.",
+  "class": "literature",
+  "lesson": 4
+}, {
+  "q": "What is conflict?",
+  "a": "A struggle between the protagonist and antagonist or between two opposing forces- internal or external.",
+  "class": "literature",
+  "lesson": 4
+}, {
+  "q": "What is a man vs nature conflict?",
+  "a": "A conflict in which a person battles something in nature or any other nonhuman element.",
+  "class": "literature",
+  "lesson": 5
+}, {
+  "q": "What is a man vs man conflict?",
+  "a": "A conflict in which one person has opposition from another person.",
+  "class": "literature",
+  "lesson": 5
+}, {
+  "q": "What is a man vs society conflict?",
+  "a": "A conflict in which a person has to stand up to or go against an entire society and its ways.",
+  "class": "literature",
+  "lesson": 5
+}, {
+  "q": "What is a man vs himself conflict?",
+  "a": "A conflict in which a person struggles to decide between two opposing actions or ideas.",
+  "class": "literature",
+  "lesson": 5
+}, {
+  "q": "What is character?",
+  "a": "A character's external and internal qualities; his or her fellings, personality, and motivations.",
+  "class": "literature",
+  "lesson": 6
+}, {
+  "q": "What is a protagonist?",
+  "a": "The main character in a story; the character who has a problem to overcome.",
+  "class": "literature",
+  "lesson": 7
+}, {
+  "q": "What is characterization?",
+  "a": "How the author reveals the external and internal qualities of a character, including the character's name, how the character looks, what the character does, says, and thinks, others' reactions to the character, elements of the setting, and character foils.",
+  "class": "literature",
+  "lesson": 8
+}, {
+  "q": "What is a theme?",
+  "a": "A theme of a poem, play, or novel is the idea or concept about people, life, or the world that the author wants us to understand. It is the moral or message of the work.",
+  "class": "literature",
+  "lesson": 9
+}, {
+  "q": "What is an external characteristic?",
+  "a": "Characteristics that can be seen: hair color, clothing, age, height, etc.",
+  "class": "literature",
+  "lesson": 10
+}, {
+  "q": "What is an internal characteristic?",
+  "a": "Characteristics that are part of who a person is: kind, honest, rude, funny, trusting, gullible, etc.",
+  "class": "literature",
+  "lesson": 10
+}, {
+  "q": "What is a plot?",
+  "a": "The order of events in the story and their causes and consequences.",
+  "class": "literature",
+  "lesson": 11
+}, {
+  "q": "What is an exposition?",
+  "a": "The introduction and background to a story",
+  "class": "literature",
+  "lesson": 11
+}, {
+  "q": "What is rising action?",
+  "a": "The events, decisions, and problems in a story that lead to the story's climax.",
+  "class": "literature",
+  "lesson": 12
+}, {
+  "q": "What is a setting?",
+  "a": "Where and when the story takes place, including culture, beliefs, and traditions of the people.",
+  "class": "literature",
+  "lesson": 13
+}, {
+  "q": "What is an antagonist?",
+  "a": "A person or situation that opposes, or goes against, the protagonist.",
+  "class": "literature",
+  "lesson": 14
+}, {
+  "q": "What is a character foil?",
+  "a": "A character who contrasts with another character in order to highlight certain traits of each character.",
+  "class": "literature",
+  "lesson": 15
+}, {
+  "q": "What is a climax?",
+  "a": "The high point of the story.",
+  "class": "literature",
+  "lesson": 16
+}, {
+  "q": "What is falling action?",
+  "a": "Results and consequences of the climax. The action winds down to a conclusion.",
+  "class": "literature",
+  "lesson": 16
+}, {
+  "q": "What is a denouement?",
+  "a": "Conclusion or final outcome of the story.",
+  "class": "literature",
+  "lesson": 16
+}, {
+  "q": "What is imagery?",
+  "a": "An author's use of vivid and descriptive language. Imagery can involve all of the senses- sight, hearing, taste, touch, and smell, and often uses metaphors and similes to express ideas",
+  "class": "literature",
+  "lesson": 17
+}, {
+  "q": "What is a rhyme?",
+  "a": "Rhyming words have the same ending sound and a different beginning sound, like 'wave' and 'gave.'",
+  "class": "literature",
+  "lesson": 18
+}, {
+  "q": "What is a slant rhyme?",
+  "a": "Two words that look as if they should rhyme, but do not, or that sound close to being a rhyme, but are not.",
+  "class": "literature",
+  "lesson": 18
+}]; // * * * * * * * * * * * * * * * * * * * MONSTERS * * * * * * * * * * * * * * * * * * *
+
+var monsterNames = ["Stormborn", "Thornscale Serpent", "Darkbloom", "Stonefury", "Frostfury", "Frostbite", "Nightmaw", "Ashenclaw Gargoyle", "Stone Hound", "Nightfury", "Winter Rose", "Frosthowl", "Shy Basilisk", "Stonewhisper", "Shadowthorn Basilisk", "Rainbow Lizard Dog", "Rainbow Frostfire", "Winter Ember", "Poisonlife", "Nightshade", "Spiny Poison", "Venomstalker", "Bloodmoon", "Cotton Candy Nightmare", "Flameshard", "Flame Blossom", "Flame Lizard", "Ironclaw", "Poison", "Ironfang Kraken", "Baby Sea Monster", "Fire Spirit", "Shy Emberthorne", "Emberclaw", "Nightstalkers", "Stormrider", "Thunderstrike", "Cotton Candy Beetle Blossom", "Sunburn", "Monster of the Seas", "Birdie Death", "Nightfall", "Shadowtalon", "Nightreaver"]; // * * * * * * * * * * * * * * * * * * * START BATTLE * * * * * * * * * * * * * * * * * * *
+
+function validation() {
+  var team = document.getElementById("select-team");
+  var course = document.getElementById("select-course");
+  var lesson = document.getElementById("select-lesson");
+
+  if (!team.value) {
+    team.style.backgroundColor = "#FFD5D5";
+  } else if (!course.value) {
+    course.style.backgroundColor = "#FFD5D5";
+  } else if (!lesson.value) {
+    lesson.style.backgroundColor = "#FFD5D5";
+  } else {
+    startBattle();
+  }
+}
+
 function startBattle() {
-    team = document.getElementById("select-team").value;
-    let questions = document.getElementById("select-questions").value;
-    let chooseDiv = document.getElementById("choose-div");
-    let displayDiv = document.getElementById("display-div");
-    //set questionSet
-    switch(questions){
-        case "geo1": questionSet = [...geo1.qa];
-            break;
-        case "lit1l3": questionSet = [...lit1l3.qa];
-            break;
-        case "lit1l4": questionSet = [...lit1l4.qa];
-            break;
-        case "lit1l5": questionSet = [...lit1l5.qa];
-            break;
-        case "lit1l6": questionSet = [...lit1l6.qa];
-            break;
-        case "lit1l7": questionSet = [...lit1l7.qa];
-            break;
-        case "lit1l8": questionSet = [...lit1l8.qa];
-            break;
-        case "lit1l9": questionSet = [...lit1l9.qa];
-            break;
-        case "lit1l10": questionSet = [...lit1l10.qa];
-            break;
-        case "lit1l11": questionSet = [...lit1l11.qa];
-            break;
-        case "lit1l12": questionSet = [...lit1l12.qa];
-            break;
-        case "lit1l13": questionSet = [...lit1l13.qa];
-            break;
-        case "lit1l14": questionSet = [...lit1l14.qa];
-            break;
-        case "lit1l15": questionSet = [...lit1l15.qa];
-            break;
-        case "lit1l16": questionSet = [...lit2l16.qa];
-            break;
-        case "lit2l2": questionSet = [...lit2l2.qa];
-            break;
-        case "lit2l12": questionSet = [...lit2l12.qa];
-            break;
-        case "geo1l3": questionSet = [...3.qa];
-            break;
-        case "geo1l5": questionSet = [...5.qa];
-            break;
-        case "geo1l6": questionSet = [...6.qa];
-            break;
-        case "geo1l7": questionSet = [...7.qa];
-            break;
-        case "geo1l8": questionSet = [...8.qa];
-            break;
-        case "geo1l10": questionSet = [...10.qa];
-            break;
-        case "geo1l11": questionSet = [...11.qa];
-            break;
-        case "geo1l12": questionSet = [...12.qa];
-            break;
-        case "geo1l13": questionSet = [...13.qa];
-            break;
-        case "geo1l14": questionSet = [...14.qa];
-            break;
-        case "geo1l15": questionSet = [...15.qa];
-            break;
-        case "geo1l16": questionSet = [...16.qa];
-            break;
-        case "geo2l2": questionSet = [...2.qa];
-            break;
-        case "geo2l3": questionSet = [...3.qa];
-            break;
-        case "geo2l4": questionSet = [...4.qa];
-            break;
-        case "geo2l5": questionSet = [...5.qa];
-            break;
-        case "geo2l6": questionSet = [...6.qa];
-            break;
-        case "geo2l7": questionSet = [...7.qa];
-            break;
-        case "geo2l8": questionSet = [...8.qa];
-            break;
-        case "geo2l9": questionSet = [...9.qa];
-            break;
-        case "geo2l10": questionSet = [...10.qa];
-            break;
-        case "geo2l11": questionSet = [...11.qa];
-            break;
-        case "geo2l12": questionSet = [...12.qa];
-            break;
-        case "geo2l13": questionSet = [...13.qa];
-            break;
-        case "geo2l14": questionSet = [...14.qa];
-            break;
-        case "geo2l15": questionSet = [...15.qa];
-            break;
-    }
-    
-    //hide choices
-    chooseDiv.classList.add('display-none');
+  team = document.getElementById("select-team").value;
+  var course = document.getElementById("select-course").value;
+  var lessonNum = document.getElementById("select-lesson").value;
+  var chooseDiv = document.getElementById("choose-div");
+  var displayDiv = document.getElementById("display-div"); //set questionSet
 
-    //create array of monsters
-    let monsters = [];
-    for (let i = 0; i<43; i++){
-        monsters[i] = i+1;
-    }
-    
-    //choose a monster to battle
-    let monster = Math.floor(Math.random() * monsters.length);
-    
-    //create and display monster image
-    let monsterImg = appendElement("img","boss-battle-img", "monster-img");
-    monsterImg.src= "img/creatures/monsters/"+(monster+1)+".png";
-    displayDiv.appendChild(monsterImg);
+  if (course === "geography2") {
+    //find the Geo2 questions
+    for (var i = 0; i < qa.length; i++) {
+      if (qa[i]["class"] === course && qa[i].lesson <= lessonNum) {
+        questionSet.push(qa[i]);
+      }
+    } //find the geo1 questions
 
-    //add VS
-    let vsText = appendElement("h1", "boss-battle-text", "vs", "VS")
-    displayDiv.appendChild(vsText);
 
-    //identify team
-    let teamSource;
-    switch(team){
-        case geographyTeam.name:
-            teamSource = geographyTeam.shield;
-            teamMembers = geographyTeam.members;
-            break;
-        case literatureTeam.name:
-            teamSource = literatureTeam.shield;
-            teamMembers = literatureTeam.members;
-            break;
-        case gameschoolTeam.name:
-            teamSource = gameschoolTeam.shield;
-            teamMembers = gameschoolTeam.members;
-            break;
-    }
-    
-    //display team crest
-    let teamCrest = appendElement("img", "boss-battle-img", "player-img");
-    teamCrest.src = "img/shields/"+teamSource+".png";
-    displayDiv.appendChild(teamCrest);
-    
-    // display monster name
-    let monsterName = appendElement("h1", "boss-battle-name", "monster-name", monsterNames[monster]);
-    displayDiv.appendChild(monsterName);
-    
-    //add START button
-        let beginBtn = appendElement("button", "submit-btn", "game-start-btn", "Begin!");
-    beginBtn.setAttribute("onclick", "beginGame()");
-    displayDiv.appendChild(beginBtn);
+    var tempQuestions = [];
 
-    //display team name
-    let teamName = appendElement("h1", "boss-battle-name", "team-name", team);
-    displayDiv.appendChild(teamName);
-}
-// * * * * * * * * * * * * * * * * * * * APPEND ELEMENT * * * * * * * * * * * * * * * * * * *
-function appendElement(element, elClass, elId, text){
-    let newElement = document.createElement(element);
-    if(elClass){
-        newElement.classList.add(elClass);
+    for (var i = 0; i < qa.length; i++) {
+      if (qa[i]["class"] === "geography1" && qa[i].lesson <= lessonNum) {
+        tempQuestions.push(qa[i]);
+      }
+    } //fill in the remainder questions with geo1 questions
+
+
+    for (var i = 20 - questionSet.length; i > 0; i--) {
+      var random = Math.floor(Math.random() * tempQuestions.length);
+      questionSet.push(tempQuestions[random]);
+      tempQuestions.splice(random, 1);
     }
-    if(elId){
-        newElement.id = elId;
+  } else {
+    //fill with questions from the course.
+    for (var i = 0; i < qa.length; i++) {
+      if (qa[i]["class"] === course && qa[i].lesson <= lessonNum) {
+        questionSet.push(qa[i]);
+      }
     }
-    if(text){
-        newElement.innerHTML = text;
-    }
-    
-    return newElement
-}
-// * * * * * * * * * * * * * * * * * * * BEGIN GAME * * * * * * * * * * * * * * * * * * *
-function beginGame(){
-    //set bossHealth and players
+  } //hide choices
+
+
+  chooseDiv.classList.add('display-none'); //create array of monsters
+
+  var monsters = [];
+
+  for (var _i = 0; _i < 43; _i++) {
+    monsters[_i] = _i + 1;
+  } //choose a monster to battle
+
+
+  var monster = Math.floor(Math.random() * monsters.length); //create and display monster image
+
+  var monsterImg = appendElement("img", "boss-battle-img", "monster-img");
+  monsterImg.src = "img/creatures/monsters/" + (monster + 1) + ".png";
+  displayDiv.appendChild(monsterImg); //add VS
+
+  var vsText = appendElement("h1", "boss-battle-text", "vs", "VS");
+  displayDiv.appendChild(vsText); //identify team
+
+  var teamSource;
+
+  switch (team) {
+    case geographyTeam.name:
+      teamSource = geographyTeam.shield;
+      teamMembers = geographyTeam.members;
+      break;
+
+    case literatureTeam.name:
+      teamSource = literatureTeam.shield;
+      teamMembers = literatureTeam.members;
+      break;
+
+    case gameschoolTeam.name:
+      teamSource = gameschoolTeam.shield;
+      teamMembers = gameschoolTeam.members;
+      break;
+  } //display team crest
+
+
+  var teamCrest = appendElement("img", "boss-battle-img", "player-img");
+  teamCrest.src = "img/shields/" + teamSource + ".png";
+  displayDiv.appendChild(teamCrest); // display monster name
+
+  var monsterName = appendElement("h1", "boss-battle-name", "monster-name", monsterNames[monster]);
+  displayDiv.appendChild(monsterName); //add START button
+
+  var beginBtn = appendElement("button", "submit-btn", "game-start-btn", "Begin!");
+  beginBtn.setAttribute("onclick", "beginGame()");
+  displayDiv.appendChild(beginBtn); //display team name
+
+  var teamName = appendElement("h1", "boss-battle-name", "team-name", team);
+  displayDiv.appendChild(teamName);
+} // * * * * * * * * * * * * * * * * * * * APPEND ELEMENT * * * * * * * * * * * * * * * * * * *
+
+
+function appendElement(element, elClass, elId, text) {
+  var newElement = document.createElement(element);
+
+  if (elClass) {
+    newElement.classList.add(elClass);
+  }
+
+  if (elId) {
+    newElement.id = elId;
+  }
+
+  if (text) {
+    newElement.innerHTML = text;
+  }
+
+  return newElement;
+} // * * * * * * * * * * * * * * * * * * * BEGIN GAME * * * * * * * * * * * * * * * * * * *
+
+
+function beginGame() {
+  //set bossHealth and players
+  if (Math.floor(questionSet.length * .75) < 20) {
     bossHealth = Math.floor(questionSet.length * .75);
-    resetPlayers()
+  } else {
+    bossHealth = 20;
+  }
 
-    //remove start button
-    let btn = document.getElementById("game-start-btn");
-    btn.remove();
+  resetPlayers(); //remove start button
 
-    //display boss health
-    let bossHealthDisplay = appendElement("p", "", "boss-health", bossHealth);
-    let displayDiv = document.getElementById("display-div");
-    displayDiv.appendChild(bossHealthDisplay);
+  var btn = document.getElementById("game-start-btn");
+  btn.remove(); //display boss health
 
+  var bossHealthDisplay = appendElement("p", "", "boss-health", bossHealth);
+  var displayDiv = document.getElementById("display-div");
+  displayDiv.appendChild(bossHealthDisplay);
+  runGame();
+}
+
+function runGame() {
+  //reset players if needed
+  if (players.length === 0) {
+    resetPlayers();
+  } //get a random player - if none left, reset players.
+
+
+  var randomNumber = Math.floor(Math.random() * players.length);
+  var randomPlayer = players[randomNumber]; //display avatar and name
+
+  var playerImg = document.getElementById("player-img");
+  playerImg.src = "img/avatars/" + randomPlayer[1] + ".png";
+  var playerName = document.getElementById("team-name");
+  playerName.innerHTML = randomPlayer[0]; //remove player from players
+
+  players.splice(randomNumber, 1); //Ask a question
+
+  askQuestion();
+}
+
+function askQuestion() {
+  var questionBtns = document.getElementById("question-btns");
+  var questionText = document.getElementById("question-div-text");
+  var max = questionSet.length;
+  var random = Math.floor(Math.random() * max);
+  var question = questionSet[random].q;
+  currentQuestion = [random]; //display the random question
+
+  questionText.innerHTML = question; //display button to see the answer
+
+  var checkBtn = appendElement("button", "submit-btn", "checkBtn", "Check Answer");
+  checkBtn.setAttribute("onclick", "displayAnswer()");
+  questionBtns.appendChild(checkBtn);
+}
+
+function displayAnswer() {
+  //display answer
+  var questionText = document.getElementById("question-div-text");
+  questionText.innerHTML = questionSet[currentQuestion].a; //remove check button
+
+  var checkBtn = document.getElementById("checkBtn");
+  checkBtn.remove(); //add buttons to choose correct or incorrect
+
+  var btnDiv = document.getElementById("question-btns");
+  var correctBtn = appendElement("button", "submit-btn", "correct-btn", "Correct");
+  var incorrectBtn = appendElement("button", "submit-btn", "incorrect-btn", "Incorrect"); //button.onclick= "inCorrect(answer)"
+
+  correctBtn.setAttribute("onclick", "inCorrect('correct')");
+  incorrectBtn.setAttribute("onclick", "inCorrect('incorrect')"); //append buttons
+
+  btnDiv.appendChild(correctBtn);
+  btnDiv.appendChild(incorrectBtn); //remove question from questionSet
+
+  questionSet.splice(currentQuestion, 1); //remove explosion-animation class
+
+  var explosionMonster = document.getElementById("explosion-monster");
+  explosionMonster.classList.remove("explosion-animation");
+  var crit = document.getElementById("crit");
+  crit.classList.remove("critmiss-animation");
+  var miss = document.getElementById("crit");
+  miss.classList.remove("critmiss-animation");
+}
+
+function inCorrect(answer) {
+  //remove buttons
+  var questionBtns = document.getElementById("question-btns");
+  questionBtns.innerHTML = ""; //remove explosion-animation class
+
+  var explosionMonster = document.getElementById("explosion-monster"); // explosionMonster.classList.remove("explosion-animation");
+
+  var crit = document.getElementById("crit"); // crit.classList.remove("critmiss-animation"); 
+
+  var miss = document.getElementById("miss"); // miss.classList.remove("critmiss-animation"); 
+  //if correction then...
+
+  if (answer === "correct") {
+    //5% chance of critical hit, 5% chance of miss
+    var random = Math.random();
+    var damage = 1;
+
+    if (random >= 0.95) {
+      damage = 2;
+      crit.classList.add("critmiss-animation");
+    } else if (random <= 0.05) {
+      damage = 0;
+      miss.classList.add("critmiss-animation");
+    } //remove boss health and display it
+
+
+    bossHealth = bossHealth - damage;
+    var bossHealthDisplay = document.getElementById("boss-health");
+    bossHealthDisplay.innerHTML = bossHealth; //display hit with an animation
+
+    explosionMonster.classList.add("explosion-animation");
+  } else {} //if no more questions, end game
+
+
+  if (questionSet.length <= 0 || bossHealth <= 0) {
+    endGame();
+  } else {
     runGame();
+  }
 }
 
-function runGame(){
-    //reset players if needed
-    if(players.length===0){
-        resetPlayers();
-    }
-    
-    //get a random player - if none left, reset players.
-    let randomNumber = Math.floor(Math.random() * players.length);
-    let randomPlayer = players[randomNumber];
-
-    //display avatar and name
-    let playerImg = document.getElementById("player-img");
-    playerImg.src = "img/avatars/"+randomPlayer[1]+".png";
-
-    let playerName = document.getElementById("team-name");
-    playerName.innerHTML = randomPlayer[0];
-
-    //remove player from players
-    players.splice(randomNumber, 1)
-    
-    //Ask a question
-    askQuestion();
+function resetPlayers() {
+  players = _toConsumableArray(teamMembers);
 }
 
-function askQuestion(){
-    let questionBtns = document.getElementById("question-btns");
-    let questionText = document.getElementById("question-div-text")
-    let max = questionSet.length;
-    let random = Math.floor(Math.random() * max);
-    let question = questionSet[random][0]
-    currentQuestion = [random]
-    //display the random question
-    questionText.innerHTML = question;
+function endGame() {
+  var displayDiv = document.getElementById("display-div");
+  var questionDiv = document.getElementById("question-div");
+  questionDiv.innerHTML = "";
+  var vs = document.getElementById("vs");
+  vs.remove();
+  var bossHeathDisplay = document.getElementById("boss-health");
+  bossHeathDisplay.remove();
+  var monsterImg = document.getElementById("monster-img");
+  var monsterName = document.getElementById("monster-name");
+  var playerImg = document.getElementById("player-img");
+  var playerName = document.getElementById("team-name");
+  var explosionMonster = document.getElementById("explosion-monster");
+  var crit = document.getElementById("crit");
+  var miss = document.getElementById("miss");
+  playerImg.remove();
+  playerName.remove();
+  explosionMonster.remove();
+  crit.remove();
+  miss.remove();
 
-    //display button to see the answer
-    let checkBtn = appendElement("button", "submit-btn", "checkBtn", "Check Answer");
-    checkBtn.setAttribute("onclick", "displayAnswer()");
-    questionBtns.appendChild(checkBtn);
-    
-}
+  if (bossHealth > 0) {
+    //display sorry banner
+    var sorry = appendElement("h1", "", "end-game-banner", "Sorry! Better Luck Next Time!");
+    displayDiv.appendChild(sorry);
+  } else {
+    //display congrats banner
+    var contrats = appendElement("h1", "", "end-game-banner", "Congratulations! You did it!");
+    displayDiv.appendChild(contrats); //show the team by removing monster and adding all team members
 
-function displayAnswer(){
-    //display answer
-    let questionText = document.getElementById("question-div-text");
-    questionText.innerHTML = questionSet[currentQuestion][1]
-
-    //remove check button
-    let checkBtn = document.getElementById("checkBtn");
-    checkBtn.remove();
-
-    //add buttons to choose correct or incorrect
-    let btnDiv = document.getElementById("question-btns");
-    let correctBtn = appendElement("button", "submit-btn", "correct-btn", "Correct");
-    let incorrectBtn = appendElement("button", "submit-btn", "incorrect-btn", "Incorrect");
-    
-    //button.onclick= "inCorrect(answer)"
-    correctBtn.setAttribute("onclick", "inCorrect('correct')");
-    incorrectBtn.setAttribute("onclick", "inCorrect('incorrect')");
-    
-    //append buttons
-    btnDiv.appendChild(correctBtn);
-    btnDiv.appendChild(incorrectBtn);
-    //remove question from questionSet
-    questionSet.splice(currentQuestion, 1);
-}
-
-function inCorrect(answer){
-    //remove buttons
-    let questionBtns = document.getElementById("question-btns");
-    questionBtns.innerHTML = "";
-
-    //remove explosion-animation class
-    let explosionMonster = document.getElementById("explosion-monster");
-    explosionMonster.classList.remove("explosion-animation");
-    // let explosionPlayer = document.getElementById("explosion-player");
-    // explosionPlayer.classList.remove("explosion-animation"); 
-    
-    //if correction then...
-    if(answer === "correct"){
-        //5% chance of critical hit, 5% chance of miss
-        let random = Math.random();
-        let crit, miss;
-        let damage = 1;
-        if(random >= 0.95){
-            damage = 2;
-            crit = true;
-        } else if (random <= 0.05){
-            damage = 0;
-            miss = true;
-        }
-        //remove boss health and display it
-        bossHealth -= damage;
-        let bossHealthDisplay= document.getElementById("boss-health");
-        bossHealthDisplay.innerHTML = bossHealth;
-
-        //display hit with an animation
-        explosionMonster.classList.add("explosion-animation");
-        
-        //if (crit === true){display crit animation}
-    } else {
-        
-    }
-        //if no more questions, end game
-            if (questionSet.length === 0 || bossHealth === 0){
-                endGame();
-            } else {
-                runGame()
-            }
-}
-
-function resetPlayers(){
-    players = [...teamMembers];
-}
-
-function endGame(){
-    let displayDiv = document.getElementById("display-div");
-    let questionDiv = document.getElementById("question-div");
-    questionDiv.innerHTML = ""
-
-    let vs = document.getElementById("vs");
-    vs.remove()
-
-    let bossHeathDisplay = document.getElementById("boss-health");
-    bossHeathDisplay.remove()
-
-    let monsterImg = document.getElementById("monster-img");
-    let monsterName = document.getElementById("monster-name");
-    let playerImg = document.getElementById("player-img");
-    let playerName = document.getElementById("team-name");
-    let explosionMonster = document.getElementById("explosion-monster");
-    let explosionPlayer = document.getElementById("explosion-player");
-
-    playerImg.remove();
-    playerName.remove();
-    explosionMonster.remove();
-    explosionPlayer.remove();
-
-    if(bossHealth > 0){
-        
-        //display sorry banner
-        let sorry = appendElement("h1", "", "end-game-banner", "Sorry! Better Luck Next Time!")
-        displayDiv.appendChild(sorry);
-        
-    } else {
-        //display congrats banner
-        let contrats = appendElement("h1", "", "end-game-banner", "Congratulations! You did it!")
-        displayDiv.appendChild(contrats);
-
-        //show the team by removing monster and adding all team members
-        monsterImg.remove();
-        monsterName.remove();
-
-        resetPlayers();
-
-        players.forEach(player => {
-            let winnerDiv = appendElement("div", "winner-div")
-
-            let name = appendElement("h1", "boss-battle-name", "", player[0])
-            winnerDiv.appendChild(name)
-            let img = appendElement("img", "boss-battle-img")
-            img.src="img/avatars/"+player[1]+".png";
-            winnerDiv.appendChild(img);
-
-            displayDiv.appendChild(winnerDiv);
-        });
-        
-
-    }
+    monsterImg.remove();
+    monsterName.remove();
+    resetPlayers();
+    players.forEach(function (player) {
+      var winnerDiv = appendElement("div", "winner-div");
+      var name = appendElement("h1", "boss-battle-name", "", player[0]);
+      winnerDiv.appendChild(name);
+      var img = appendElement("img", "boss-battle-img");
+      img.src = "img/avatars/" + player[1] + ".png";
+      winnerDiv.appendChild(img);
+      displayDiv.appendChild(winnerDiv);
+    });
+  }
 }

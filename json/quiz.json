@@ -1,0 +1,232 @@
+qa = {
+        "q": "What is cartography?",
+        "a": "the study of making maps",
+        "class": "geography",
+        "lesson": 3
+    }, {
+        "q": "What is geography?",
+        "a": "a description of the earth and the people who live on it",
+        "class": "geography",
+        "lesson": 3
+    }, {
+        "q": "What is mathematical geography?",
+        "a": "a description of the earth and space using numbers and measurements",
+        "class": "geography",
+        "lesson": 3
+    }, {
+        "q": "What is the earth's orbit?",
+        "a": "the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once.",
+        "class": "geography",
+        "lesson": 3
+    }, {
+        "q": "What is the earth's axis?",
+        "a": "a central, straight imaginary line about which the earth rotates. One rotation equals 1 day or 24 hours.",
+        "class": "geography",
+        "lesson": 3
+    }, {
+        "q": "What is shape?",
+        "a": "the outline of an area or figure",
+        "class": "geography",
+        "lesson": 5
+    }, {
+        "q": "What is form?",
+        "a": "an object that is not flat but has height, width, and depth (three-dimensional)",
+        "class": "geography",
+        "lesson": 5
+    }, {
+        "q": "What is a relief map?",
+        "a": "a map or model that includes three-dimensional (3D) forms",
+        "class": "geography",
+        "lesson": 5
+    }, {
+        "q": "What is a cloud?",
+        "a": "a grouping of tiny water drops and/or ice crystals that float in the air",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is cirrus",
+        "a": "thin, wispy clouds found high in the sky",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is cirrocumulus?",
+        "a": "small, rounded white puffs; clouds that form long rows in the sky",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is cumulus?",
+        "a": "big, white puffy clouds",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is cumulonimbus",
+        "a": "large, gray cumulus clouds that are heavy with water",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is stratus",
+        "a": "low, flat clouds that bring rain or snow",
+        "class": "geography",
+        "lesson": 6
+    }, {
+        "q": "What is atmosphere?",
+        "a": "the entire mass of fluid, air, and vapors surrounding the earth",
+        "class": "geography",
+        "lesson": 7
+    }, {
+        "q": "What is a climate?",
+        "a": "an average of the high and low temperatures in an area on the earth over a long period of time (about 30 years)",
+        "class": "geography",
+        "lesson": 8
+    }, {
+        "q": "What is weather?",
+        "a": "the condition of the atmosphere at any given moment",
+        "class": "geography",
+        "lesson": 8
+    }, {
+        "q": "What is the hydrosphere?",
+        "a": "all of the water contained on the earth; divided into two sections: oceanic waters and continental water",
+        "class": "geography",
+        "lesson": 10
+    }, {
+        "q": "What is a gulf?",
+        "a": "a large extension of an ocean or sea into the land",
+        "class": "geography",
+        "lesson": 10
+    }, {
+        "q": "What is a bay?",
+        "a": "a body of water smaller than a gulf that is nearly surrounded by land",
+        "class": "geography",
+        "lesson": 10
+    }, {
+        "q": "What is a fjord?",
+        "a": "a narrow inlet of the sea with steep banks made by a glacier",
+        "class": "geography",
+        "lesson": 10
+    }, {
+        "q": "What is a harbor?",
+        "a": "a part of an ocean or lake next to land that is protected and deep enough for ships to anchor",
+        "class": "geography",
+        "lesson": 10
+    }, {
+        "q": "What is a glacier?",
+        "a": "large body of slowly moving ice flowing downward from the mountains",
+        "class": "geography",
+        "lesson": 11
+    }, {
+        "q": "What is a river?",
+        "a": "large stream of water flowing through land",
+        "class": "geography",
+        "lesson": 11
+    }, {
+        "q": "What is a lake?",
+        "a": "large body of water surrounded by land",
+        "class": "geography",
+        "lesson": 11
+    }, {
+        "q": "What is a saltwater lake?",
+        "a": "lake which has water entering, but no outlet, so the water is salty",
+        "class": "geography",
+        "lesson": 11
+    }, {
+        "q": "What is a groundwater?",
+        "a": "he water found beneath the surface of the ground",
+        "class": "geography",
+        "lesson": 12
+    }, {
+        "q": "What is a channel?",
+        "a": "deep, narrow body of water connecting two larger bodies of water",
+        "class": "geography",
+        "lesson": 12
+    }, {
+        "q": "What is a lock?",
+        "a": "a device used for raising and lowering boats, ships, and other watercraft between stretches of water of different levels on rivers and canals",
+        "class": "geography",
+        "lesson": 12
+    }, {
+        "q": "What is a canal?",
+        "a": "a man-made ditch for transporting people and things",
+        "class": "geography",
+        "lesson": 12
+    }, {
+        "q": "What is a valley?",
+        "a": "lowland between hills or mountains",
+        "class": "geography",
+        "lesson": 13
+    }, {
+        "q": "What is a canyon?",
+        "a": "a deep, narrow valley with steep walls",
+        "class": "geography",
+        "lesson": 13
+    }, {
+        "q": "What is a mountain?",
+        "a": "high, rocky land, usually with steep sides and a pointed or rounded top, higher than a hill",
+        "class": "geography",
+        "lesson": 14
+    }, {
+        "q": "What is a hill?",
+        "a": "raised part of the earth’s surface, with sloping slides; smaller than a mountain",
+        "class": "geography",
+        "lesson": 14
+    }, {
+        "q": "What is a mountain range?",
+        "a": "mountain range —a group of mountains bordered by lowlands",
+        "class": "geography",
+        "lesson": 14
+    }, {
+        "q": "What is a divide?",
+        "a": "a height of land that separates river basins",
+        "class": "geography",
+        "lesson": 14
+    }, {
+        "q": "What is a beach?",
+        "a": "a narrow, gently sloping strip of land along the edge of a body of water",
+        "class": "geography",
+        "lesson": 14
+    }, {
+        "q": "What is a basin?",
+        "a": "an area of land drained by a river that is largely enclosed by higher land",
+        "class": "geography",
+        "lesson": 15
+    }, {
+        "q": "What is a plateau?",
+        "a": "region that is mostly high and flat",
+        "class": "geography",
+        "lesson": 15
+    }, {
+        "q": "What is a plain?",
+        "a": "broad, level land",
+        "class": "geography",
+        "lesson": 15
+    }, {
+        "q": "What is a island?",
+        "a": "a piece of land  entirely surrounded by water, smaller than a continent",
+        "class": "geography",
+        "lesson": 15
+    }, {
+        "q": "What is a volcano?",
+        "a": "an opening in the earth’s crust through which lava, volcanic ash, and gases escape",
+        "class": "geography",
+        "lesson": 15
+    }, {
+        "q": "What is a lava?",
+        "a": "molten rock on the earth’s surface",
+        "class": "geography",
+        "lesson": 16
+    }, {
+        "q": "What is a magma?",
+        "a": "molten rock within the earth",
+        "class": "geography",
+        "lesson": 16
+    }, {
+        "q": "",
+        "a": "",
+        "class": "geography",
+        "lesson": 16
+    }, {
+        "q": "",
+        "a": "",
+        "class": "geography",
+        "lesson": 16
+    }
+

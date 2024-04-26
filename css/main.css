@@ -229,7 +229,7 @@ img.avatar-choice {
     grid-row: 1;
 }
 
-#explosion-monster{
+#explosion-monster, #crit, #miss{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row: 1;
@@ -238,14 +238,14 @@ img.avatar-choice {
     z-index: 1;
 }
 
-#explosion-player{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row: 1;
-    max-width: 30vw;
-    height: 0rem;
-    z-index: 1;
+#crit, #miss{
+    color: #fff;
+    font-size: 0rem;
+    font-weight: bold;
+    z-index: 2;
 }
+
+
 
 /* * * * * * * * * DIVS * * * * * * * * */
 .list-info p{
@@ -267,7 +267,7 @@ img.avatar-choice {
     
 }
 
-.choose-team, .choose-questions {
+.choose-team, .choose-questions, .choose-course {
     margin-bottom: 2rem;
 }
 
@@ -362,3 +362,13 @@ img.avatar-choice {
     100% {height: 0rem;}
 }
 
+.critmiss-animation{
+    animation-name: critmiss;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes critmiss{
+    50% {font-size: 3rem;}
+    100% {font-size: 0rem;}
+}

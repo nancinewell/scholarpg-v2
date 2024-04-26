@@ -8,9 +8,9 @@
         <title>ScholaRPG</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/large.css">
-</head>
+        <script src="js/bossBattle1.js"></script>
+    </head>
 <body>
-    <script src="js/bossBattle.js"></script>
     <header>
         <h1>S<span class="logo-lower-case">CHOLA</span>RPG</h1>
         <nav>
@@ -20,11 +20,18 @@
             <ul class="nav_ul">
                 <li class="nav_ul">
                     <a href="index.html">Home</a>
-                    <a href="geo.html">Geography</a>
-                    <a href="lit.html">Literature</a>
-                    <a href="game-ms.html">Gameschool 7-8</a>
-                    <a href="game-hs.html">Gameschool 9-12</a>
                 </li>
+                <li class="nav_ul">
+                <a href="geo.html">Geography</a>
+                </li>
+                <li class="nav_ul">
+                    <a href="lit.html">Literature</a>
+                </li>
+                <li class="nav_ul">
+                    <a href="game-ms.html">Gameschool 7-8</a>
+                </li>
+                <li class="nav_ul">
+                    <a href="game-hs.html">Gameschool 9-12</a>
             </ul>
         </nav>
     </header>
@@ -33,7 +40,7 @@
         <div id="choose-div">
             <div class="choose-team">
                 <h2>Choose a Team</h2>
-                <select class="form-control" id="select-team">
+                <select class="form-control" id="select-team" required>
                     <!-- <option value="">Select One</option> -->
                     <option>Mystics</option>
                     <option>Blue Dragons</option>
@@ -41,33 +48,42 @@
                 </select>
             </div>
             
-            <div class="choose-questions">
-                <h2>Choose Which Question Set</h2>
-                <select class="form-control" id="select-questions">
-                    <option value="">Select One</option>
-                    <option value="lit1l3">Literature 3 </option>
-                    <option value="lit1l4">Literature 4 </option>
-                    <option value="lit1l5">Literature 5 </option>
-                    <option value="lit1l6">Literature 6 </option>
-                    <option value="lit1l7">Literature 7 </option>
-                    <option value="lit1l8">Literature 8 </option>
-                    <option value="lit1l9">Literature 9 </option>
-                    <option value="lit1l10">Literature 10 </option>
-                    <option value="lit1l11">Literature 11 </option>
-                    <option value="lit1l12">Literature 12 </option>
-                    <option value="lit1l13">Literature 13 </option>
-                    <option value="lit1l14">Literature 14 </option>
-                    <option value="lit1l15">Literature 15 </option>
-                    <option value="lit2l2-2">Literature 2-2 </option>
-                    <option value="lit2l2-12">Literature 2-12 </option>
-
+            <div class="choose-course">
+                <h2>Choose Which Course</h2>
+                <select class="form-control" id="select-course" required>
+                    <!-- <option value="">Select One</option> -->
+                    <option value="geography">Geography</option>
+                    <option value="liturature">Literature</option>                    
                 </select>
             </div>
-            <button class="submit-btn" onclick="startBattle()">Commence Battle!</button>
+
+            <div class="choose-lesson">
+                <h2>Choose Which Lesson</h2>
+                <select class="form-control" id="select-lesson" required>
+                    <option value="">Select One</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+            <button class="submit-btn" onclick="validation()">Commence Battle!</button>
         </div>
         <div id="display-div">
             <img id="explosion-monster" src="img/explosions/1.1.png">
-            <img id="explosion-player" src="img/explosions/6.1.png">
+            <span id="crit">Critical Hit!</span>
+            <span id="miss">Miss!</span>
         </div>
         <div id="question-div">
             <p id="question-div-text"></p>

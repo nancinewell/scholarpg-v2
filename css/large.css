@@ -18,7 +18,7 @@
     nav ul.nav_ul{
         min-height: 100%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         
     }
 
