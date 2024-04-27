@@ -1699,7 +1699,7 @@ function startBattle() {
   var monster = Math.floor(Math.random() * monsters.length); //create and display monster image
 
   var monsterImg = appendElement("img", "boss-battle-img", "monster-img");
-  monsterImg.src = "img/creatures/monsters/" + (monster + 1) + ".png";
+  monsterImg.src = "img/creatures/monsters/" + (monster + 1) + ".jpg";
   displayDiv.appendChild(monsterImg); //add VS
 
   var vsText = appendElement("h1", "boss-battle-text", "vs", "VS");
@@ -1726,7 +1726,7 @@ function startBattle() {
 
 
   var teamCrest = appendElement("img", "boss-battle-img", "player-img");
-  teamCrest.src = "img/shields/" + teamSource + ".png";
+  teamCrest.src = "img/shields/" + teamSource + ".jpg";
   displayDiv.appendChild(teamCrest); // display monster name
 
   var monsterName = appendElement("h1", "boss-battle-name", "monster-name", monsterNames[monster]);
@@ -1790,7 +1790,7 @@ function runGame() {
   var randomPlayer = players[randomNumber]; //display avatar and name
 
   var playerImg = document.getElementById("player-img");
-  playerImg.src = "img/avatars/" + randomPlayer[1] + ".png";
+  playerImg.src = "img/avatars/" + randomPlayer[1] + ".jpg";
   var playerName = document.getElementById("team-name");
   playerName.innerHTML = randomPlayer[0]; //remove player from players
 
@@ -1925,7 +1925,7 @@ function endGame() {
       var name = appendElement("h1", "boss-battle-name", "", player[0]);
       winnerDiv.appendChild(name);
       var img = appendElement("img", "boss-battle-img");
-      img.src = "img/avatars/" + player[1] + ".png";
+      img.src = "img/avatars/" + player[1] + ".jpg";
       winnerDiv.appendChild(img);
       displayDiv.appendChild(winnerDiv);
     });
