@@ -1310,7 +1310,7 @@ let qa = [{
         "lesson": 11
     }, {
         "q": "What is a groundwater?",
-        "a": "he water found beneath the surface of the ground",
+        "a": "the water found beneath the surface of the ground",
         "class": "geography1",
         "lesson": 12
     }, {
@@ -1350,7 +1350,7 @@ let qa = [{
         "lesson": 14
     }, {
         "q": "What is a mountain range?",
-        "a": "mountain range —a group of mountains bordered by lowlands",
+        "a": "a group of mountains bordered by lowlands",
         "class": "geography1",
         "lesson": 14
     }, {

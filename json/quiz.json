@@ -75,7 +75,7 @@ qa = {
         "lesson": 7
     }, {
         "q": "What is a climate?",
-        "a": "an average of the high and low temperatures in an area on the earth over a long period of time (about 30 years)",
+        "a": "average weather conditions over a period of years.",
         "class": "geography",
         "lesson": 8
     }, {
@@ -130,7 +130,7 @@ qa = {
         "lesson": 11
     }, {
         "q": "What is a groundwater?",
-        "a": "he water found beneath the surface of the ground",
+        "a": "the water found beneath the surface of the ground",
         "class": "geography",
         "lesson": 12
     }, {
@@ -170,7 +170,7 @@ qa = {
         "lesson": 14
     }, {
         "q": "What is a mountain range?",
-        "a": "mountain range —a group of mountains bordered by lowlands",
+        "a": "a group of mountains bordered by lowlands",
         "class": "geography",
         "lesson": 14
     }, {
@@ -218,7 +218,7 @@ qa = {
         "a": "molten rock within the earth",
         "class": "geography",
         "lesson": 16
-    }, {
+    }/*, {
         "q": "",
         "a": "",
         "class": "geography",
@@ -228,5 +228,5 @@ qa = {
         "a": "",
         "class": "geography",
         "lesson": 16
-    }
+    }*/
 
