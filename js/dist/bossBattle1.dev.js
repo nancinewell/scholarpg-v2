@@ -13,20 +13,23 @@ var bossHealth, team, teamMembers, players, currentQuestion;
 var questionSet = []; // * * * * * * * * * * * * * * * * * * * TEAM INFO * * * * * * * * * * * * * * * * * * *
 
 geographyTeam = {
-  name: "Blue Dragons",
-  members: [["Ashlyn", "bard-female-4"], ["Adolyn", "archer-female-4"], ["Ellie", "mage-female-4"], ["Ephraim", "archer-male-4"], ["Eliana", "healer-female-6"]],
+  name: "Geography",
+  members: [["Alex", "warrior-male-9"], ["Ashlyn", "mage-female-9"], ["Elaina", "healer-female-1"], ["Elijah", "warrior-male-6"], ["Ella", "mage-female-3"], ["Josh", "warrior-male-4"]],
   shield: "5"
 };
 literatureTeam = {
-  name: "Bunnicorns",
-  members: [["Ephraim", "healer-male-10"], ["Eleanor", "mage-female-6"], ["Bob", "warrior-male-5"]],
+  name: "Literature",
+  members: [["Alaina", "healer-female-7"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Deiva", "warrior-female-2"], ["Ellie", "mage-female-6"], ["Emersyn", "archer-female-7"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
   shield: "3"
-};
-gameschoolTeam = {
-  name: "Mystics",
-  members: [["Ethan", "archer-male-3"], ["Emma", "bard-female-12"], ["Gwen", "warrior-female-11"]],
-  shield: "2"
-}; // * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
+}; // gameschoolTeam={
+//     name: "Mystics",
+//     members: [  ["Ethan", "archer-male-3"],
+//                 ["Emma", "bard-female-12"],
+//                 ["Gwen", "warrior-female-11"]
+//             ],
+//     shield: "2"
+//}
+// * * * * * * * * * * * * * * * * * * * QUESTION SETS * * * * * * * * * * * * * * * * * * *
 
 /*geo1l3={
     qa: [
@@ -1666,9 +1669,11 @@ function startBattle() {
     var tempQuestions = [];
 
     for (var i = 0; i < qa.length; i++) {
-      if (qa[i]["class"] === "geography1" && qa[i].lesson <= lessonNum) {
-        tempQuestions.push(qa[i]);
-      }
+      if (qa[i]["class"] === "geography1"
+      /*&& qa[i].lesson <= lessonNum*/
+      ) {
+          tempQuestions.push(qa[i]);
+        }
     } //fill in the remainder questions with geo1 questions
 
 
