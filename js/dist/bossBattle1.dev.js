@@ -1184,12 +1184,27 @@ var qa = [{
   "q": "What is cartography?",
   "a": "the study of making maps",
   "class": "geography1",
-  "lesson": 3
+  "lesson": 1
 }, {
   "q": "What is geography?",
   "a": "a description of the earth and the people who live on it",
   "class": "geography1",
-  "lesson": 3
+  "lesson": 1
+}, {
+  "q": "What is the lithosphere?",
+  "a": "the portion of the earth that is land",
+  "class": "geography1",
+  "lesson": 1
+}, {
+  "q": "What is the atmosphere?",
+  "a": "the entire mass of fluid, air, and vapors surrounding the earth",
+  "class": "geography1",
+  "lesson": 1
+}, {
+  "q": "What is the hydrosphere?",
+  "a": "all the water contained on the earth",
+  "class": "geography1",
+  "lesson": 1
 }, {
   "q": "What is mathematical geography?",
   "a": "a description of the earth and space using numbers and measurements",
