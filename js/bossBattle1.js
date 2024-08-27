@@ -1511,19 +1511,73 @@ let qa = [{
         "q": "What is fiction?",
         "a": "A made up or imaginary story.",
         "class": "literature",
-        "lesson": 2
+        "lesson": 1
     }, {
         "q": "What is nonfiction?",
         "a": "Writing based on real life fact or information; not made up",
         "class": "literature",
-        "lesson": 2
+        "lesson": 1
 
     }, {
         "q": "What is historical fiction?",
         "a": "A story that contains some real parts from history and some made up (or fictional) parts. The real parts may be places, events, or people. The fiction is something the author adds to make the story more interesting, including people, details, events, conversations, etc.",
         "class": "literature",
-        "lesson": 2
+        "lesson": 1
     }, {
+        "q": "Define parley.",
+        "a": "a meeting or conference; an informal conference between enemies under a truce, especially to discuss terms, bargain, conditions of surrender, etc.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define cease.",
+        "a": "to stop; to come to an end.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define conceal.",
+        "a": "to hide; withdraw or remove from observation; cover or keep from sight.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define companion.",
+        "a": "a person who is frequently in the company of, associates with, or accompanies another.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define intruder.",
+        "a": "a person who comes in without invitation, permission, or welcome.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define enclose.",
+        "a": "to shut or hem in; close in on all sides; to surround.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define ravine.",
+        "a": "a narrow steep-sided valley commonly eroded by running water.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define grasp.",
+        "a": "to seize upon; hold firmly or to get hold of mentally; comprehend; understand.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
+        "q": "Define profit.",
+        "a": "advantage; benefit; gain.",
+        "class": "literature",
+        "lesson": 1
+
+    },{
         "q": "What is foreshadowing?",
         "a": "To give clues or hints to suggest events that will occur later in the story, either good or bad.",
         "class": "literature",
