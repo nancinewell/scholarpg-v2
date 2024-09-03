@@ -10,7 +10,6 @@ geographyTeam={
                 ["Elaina", "healer-female-1"],
                 ["Elijah", "warrior-male-6"],
                 ["Ella", "mage-female-3"],
-                ["Josh", "warrior-male-4"],
                 ["Kylee", "healer-female-9"],
                 ["Ariela", "healer-female-4"]
             ],
