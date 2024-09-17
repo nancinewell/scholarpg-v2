@@ -20,7 +20,6 @@ literatureTeam={
     members: [  ["Alaina", "healer-female-7"],
                 ["AnnaLisa", "healer-female-6"],
                 ["Aidan", "healer-male-6"],
-                ["Deiva", "warrior-female-2"],
                 ["Ellie", "mage-female-6"],
                 ["Emersyn", "archer-female-7"],
                 ["Ephraim", "mage-male-10"],
@@ -1589,6 +1588,31 @@ let qa = [{
         "class": "literature",
         "lesson": 3
     }, {
+        "q": "What is a homophone?",
+        "a": "Words that sound the same but have different meanings.",
+        "class": "literature",
+        "lesson": 3
+    }, {
+        "q": "What is pitch?",
+        "a": "a black, sticky substance.",
+        "class": "literature",
+        "lesson": 3
+    }, {
+        "q": "What is a spit?",
+        "a": "a narrow point of land.",
+        "class": "literature",
+        "lesson": 3
+    }, {
+        "q": "What is a lair?",
+        "a": "a den or resting place of a wild animal.",
+        "class": "literature",
+        "lesson": 3
+    }, {
+        "q": "What is a simile?",
+        "a": "A comparison that uses the words 'like' or 'as'",
+        "class": "literature",
+        "lesson": 3
+    },{
         "q": "What is personification?",
         "a": "A type of metaphor in which an idea, a thing, or an animal is given human characteristics.",
         "class": "literature",

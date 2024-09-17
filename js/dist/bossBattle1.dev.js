@@ -14,12 +14,12 @@ var questionSet = []; // * * * * * * * * * * * * * * * * * * * TEAM INFO * * * *
 
 geographyTeam = {
   name: "Geography",
-  members: [["Alex", "warrior-male-9"], ["Ashlyn", "mage-female-9"], ["Elaina", "healer-female-1"], ["Elijah", "warrior-male-6"], ["Ella", "mage-female-3"], ["Josh", "warrior-male-4"]],
+  members: [["Alex", "warrior-male-9"], ["Ashlyn", "mage-female-9"], ["Elaina", "healer-female-1"], ["Elijah", "warrior-male-6"], ["Ella", "mage-female-3"], ["Kylee", "healer-female-9"], ["Ariela", "healer-female-4"]],
   shield: "5"
 };
 literatureTeam = {
   name: "Literature",
-  members: [["Alaina", "healer-female-7"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Deiva", "warrior-female-2"], ["Ellie", "mage-female-6"], ["Emersyn", "archer-female-7"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
+  members: [["Alaina", "healer-female-7"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Emersyn", "archer-female-7"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
   shield: "3"
 }; // gameschoolTeam={
 //     name: "Mystics",
@@ -1568,6 +1568,31 @@ var qa = [{
 }, {
   "q": "What is alliteration?",
   "a": "The repetition of initial (or beginning) sounds of words.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is a homophone?",
+  "a": "Words that sound the same but have different meanings.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is pitch?",
+  "a": "a black, sticky substance.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is a spit?",
+  "a": "a narrow point of land.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is a lair?",
+  "a": "a den or resting place of a wild animal.",
+  "class": "literature",
+  "lesson": 3
+}, {
+  "q": "What is a simile?",
+  "a": "A comparison that uses the words 'like' or 'as'",
   "class": "literature",
   "lesson": 3
 }, {
