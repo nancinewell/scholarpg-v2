@@ -30,6 +30,18 @@ literatureTeam={
             ],
     shield: "3"
 }
+microTeam={
+    name: "Microschool",
+    members: [  
+        ["Alaina", "healer-female-7"],
+        ["AnnaLisa", "healer-female-6"],
+        ["Aidan", "healer-male-6"],
+        ["Kody", "healer-male-3"],
+        ["Liam", "healer-male-13"],
+        ["Mikhail", "archer-male-2"]
+    ],
+    shield: "2"
+}
 // gameschoolTeam={
 //     name: "Mystics",
 //     members: [  ["Ethan", "archer-male-3"],
@@ -1873,6 +1885,10 @@ function startBattle() {
         case gameschoolTeam.name:
             teamSource = gameschoolTeam.shield;
             teamMembers = gameschoolTeam.members;
+            break;
+        case microTeam.name:
+            teamSource = microTeam.shield;
+            teamMembers = microTeam.members;
             break;
     }
     
