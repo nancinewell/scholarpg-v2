@@ -29,7 +29,7 @@ literatureTeam={
                 ["Mikhail", "archer-male-2"]
             ],
     shield: "3"
-}
+},
 microTeam={
     name: "Microschool",
     members: [  
@@ -1660,6 +1660,21 @@ let qa = [{
         "class": "literature",
         "lesson": 6
     }, {
+        "q": "What does fierce mean?",
+        "a": "",
+        "class": "literature",
+        "lesson": 6
+    }, {
+        "q": "What are haunches?",
+        "a": "",
+        "class": "literature",
+        "lesson": 6
+    },{
+        "q": "Define warily?",
+        "a": "",
+        "class": "literature",
+        "lesson": 6
+    },{
         "q": "What is a protagonist?",
         "a": "The main character in a story; the character who has a problem to overcome.",
         "class": "literature",
@@ -1882,10 +1897,10 @@ function startBattle() {
             teamSource = literatureTeam.shield;
             teamMembers = literatureTeam.members;
             break;
-        case gameschoolTeam.name:
-            teamSource = gameschoolTeam.shield;
-            teamMembers = gameschoolTeam.members;
-            break;
+        // case gameschoolTeam.name:
+        //     teamSource = gameschoolTeam.shield;
+        //     teamMembers = gameschoolTeam.members;
+        //     break;
         case microTeam.name:
             teamSource = microTeam.shield;
             teamMembers = microTeam.members;

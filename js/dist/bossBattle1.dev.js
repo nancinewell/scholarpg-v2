@@ -21,8 +21,7 @@ literatureTeam = {
   name: "Literature",
   members: [["Alaina", "healer-female-7"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Emersyn", "archer-female-7"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
   shield: "3"
-};
-microTeam = {
+}, microTeam = {
   name: "Microschool",
   members: [["Alaina", "healer-female-7"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
   shield: "2"
@@ -1636,6 +1635,21 @@ var qa = [{
   "class": "literature",
   "lesson": 6
 }, {
+  "q": "What does fierce mean?",
+  "a": "",
+  "class": "literature",
+  "lesson": 6
+}, {
+  "q": "What are haunches?",
+  "a": "",
+  "class": "literature",
+  "lesson": 6
+}, {
+  "q": "Define warily?",
+  "a": "",
+  "class": "literature",
+  "lesson": 6
+}, {
   "q": "What is a protagonist?",
   "a": "The main character in a story; the character who has a problem to overcome.",
   "class": "literature",
@@ -1812,11 +1826,10 @@ function startBattle() {
       teamSource = literatureTeam.shield;
       teamMembers = literatureTeam.members;
       break;
-
-    case gameschoolTeam.name:
-      teamSource = gameschoolTeam.shield;
-      teamMembers = gameschoolTeam.members;
-      break;
+    // case gameschoolTeam.name:
+    //     teamSource = gameschoolTeam.shield;
+    //     teamMembers = gameschoolTeam.members;
+    //     break;
 
     case microTeam.name:
       teamSource = microTeam.shield;
