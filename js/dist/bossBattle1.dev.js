@@ -1636,17 +1636,17 @@ var qa = [{
   "lesson": 6
 }, {
   "q": "What does fierce mean?",
-  "a": "",
+  "a": "violent in force, intensity, etc.",
   "class": "literature",
   "lesson": 6
 }, {
   "q": "What are haunches?",
-  "a": "",
+  "a": "hindquarters or backside",
   "class": "literature",
   "lesson": 6
 }, {
   "q": "Define warily?",
-  "a": "",
+  "a": "carefully, cautiously, suspiciously",
   "class": "literature",
   "lesson": 6
 }, {
