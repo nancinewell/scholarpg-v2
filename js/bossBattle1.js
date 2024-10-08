@@ -1680,6 +1680,16 @@ let qa = [{
         "class": "literature",
         "lesson": 7
     }, {
+        "q": "What does hasten mean?",
+        "a": "to speed something along or hurry",
+        "class": "literature",
+        "lesson": 7
+    },{
+        "q": "What is an ornament?",
+        "a": "a decoration or adornment",
+        "class": "literature",
+        "lesson": 7
+    },{
         "q": "What is characterization?",
         "a": "How the author reveals the external and internal qualities of a character, including the character's name, how the character looks, what the character does, says, and thinks, others' reactions to the character, elements of the setting, and character foils.",
         "class": "literature",
