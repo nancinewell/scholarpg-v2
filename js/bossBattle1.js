@@ -915,7 +915,7 @@ lit1l6={
         ["What is a man vs man ?","A conflict in which one person has opposition from another person."],
         ["What is a man vs society?","A conflict in which a person has to stand up to or go against an entire society and its ways."],
         ["What is a man vs himself?","A conflict in which a person struggles to decide between two opposing actions or ideas."],
-        ["What is character?","A character's external and internal qualities; his or her fellings, personality, and motivations."]
+        ["What is character?","A character's external and internal qualities; his or her feelings, personality, and motivations."]
     ]}
 lit1l7={
     qa: [
@@ -1656,7 +1656,7 @@ let qa = [{
         "lesson": 5
     }, {
         "q": "What is character?",
-        "a": "A character's external and internal qualities; his or her fellings, personality, and motivations.",
+        "a": "A character's external and internal qualities; his or her feelings, personality, and motivations.",
         "class": "literature",
         "lesson": 6
     }, {
