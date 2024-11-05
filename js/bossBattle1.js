@@ -7,7 +7,7 @@ geographyTeam={
     name: "Geography",
     members: [  ["Alex", "warrior-male-9"],
                 ["Ashlyn", "mage-female-9"],
-                ["Elaina", "healer-female-1"],
+                ["Elena", "healer-female-1"],
                 ["Elijah", "warrior-male-6"],
                 ["Ella", "mage-female-3"],
                 ["Kylee", "healer-female-9"],
