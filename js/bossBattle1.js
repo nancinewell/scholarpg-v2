@@ -6,7 +6,7 @@ let questionSet = []
 geographyTeam={
     name: "Geography",
     members: [  ["Adalynn", "mage-female-9"],
-                ["Elaina", "healer-female-1"],
+                ["Elena", "healer-female-1"],
                 ["Elijah", "warrior-male-6"],
                 ["Ella", "mage-female-3"],
                 ["Kylee", "healer-female-9"],
@@ -37,6 +37,7 @@ microTeam={
         ["Aidan", "healer-male-6"],
         ["Kody", "healer-male-3"],
         ["Liam", "healer-male-13"],
+        ["Riley", "warrior-male-4"],
         ["Mikhail", "archer-male-2"]
     ],
     shield: "2"
