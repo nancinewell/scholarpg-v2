@@ -5,8 +5,7 @@ let questionSet = []
 // * * * * * * * * * * * * * * * * * * * TEAM INFO * * * * * * * * * * * * * * * * * * *
 geographyTeam={
     name: "Geography",
-    members: [  ["Alex", "warrior-male-9"],
-                ["Ashlyn", "mage-female-9"],
+    members: [  ["Adalynn", "mage-female-9"],
                 ["Elaina", "healer-female-1"],
                 ["Elijah", "warrior-male-6"],
                 ["Ella", "mage-female-3"],
@@ -17,11 +16,11 @@ geographyTeam={
 }
 literatureTeam={
     name: "Literature",
-    members: [  ["Alaina", "healer-female-7"],
+    members: [  ["Gabriel", "mage-male-4"],
                 ["AnnaLisa", "healer-female-6"],
                 ["Aidan", "healer-male-6"],
                 ["Ellie", "mage-female-6"],
-                ["Emersyn", "archer-female-7"],
+                ["Riley", "warrior-male-4"],
                 ["Ephraim", "mage-male-10"],
                 ["Isaac", "mage-male-12"],
                 ["Kody", "healer-male-3"],
