@@ -14,12 +14,12 @@ var questionSet = []; // * * * * * * * * * * * * * * * * * * * TEAM INFO * * * *
 
 geographyTeam = {
   name: "Geography",
-  members: [["Adalynn", "mage-female-9"], ["Elena", "healer-female-1"], ["Elijah", "warrior-male-6"], ["Ella", "mage-female-3"], ["Kylee", "healer-female-9"], ["Ariela", "healer-female-4"]],
+  members: [["Adalynn", "mage-female-12"], ["Elena", "healer-female-1"], ["Elijah", "warrior-male-6"], ["Ella", "mage-female-3"], ["Kylee", "archer-female-7"], ["Ariella", "warrior-female-5"]],
   shield: "5"
 };
 literatureTeam = {
   name: "Literature",
-  members: [["Gabriel", "mage-male-4"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Riley", "warrior-male-4"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Mikhail", "archer-male-2"]],
+  members: [["Gabriel", "mage-male-4"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Riley", "warrior-male-4"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Ryan", "archer-male-4"], ["Mikhail", "archer-male-2"]],
   shield: "3"
 }, microTeam = {
   name: "Microschool",
@@ -46,7 +46,7 @@ literatureTeam = {
 }
 geo1l5={
     qa: [
-        ["What iscartography?","the study of making maps"],
+        ["What is cartography?","the study of making maps"],
         ["What is geography?","a description of the earth and the people who live on it"],
         ["What is mathematical geography?","a description of the earth and space using numbers and measurements"],
         ["What is the earth's orbit?","the path the earth takes around the sun; it takes 1 year or 365 days to orbit the sun once."],
