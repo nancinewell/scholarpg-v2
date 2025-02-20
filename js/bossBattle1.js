@@ -21,6 +21,7 @@ literatureTeam={
                 ["Aidan", "healer-male-6"],
                 ["Ellie", "mage-female-6"],
                 ["Riley", "warrior-male-4"],
+                ["Alek", "warrior-male-9"],
                 ["Ephraim", "mage-male-10"],
                 ["Isaac", "mage-male-12"],
                 ["Kody", "healer-male-3"],

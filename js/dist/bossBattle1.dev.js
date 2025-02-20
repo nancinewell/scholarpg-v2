@@ -19,7 +19,7 @@ geographyTeam = {
 };
 literatureTeam = {
   name: "Literature",
-  members: [["Gabriel", "mage-male-4"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Riley", "warrior-male-4"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Ryan", "archer-male-4"], ["Mikhail", "archer-male-2"]],
+  members: [["Gabriel", "mage-male-4"], ["AnnaLisa", "healer-female-6"], ["Aidan", "healer-male-6"], ["Ellie", "mage-female-6"], ["Riley", "warrior-male-4"], ["Alek", "warrior-male-9"], ["Ephraim", "mage-male-10"], ["Isaac", "mage-male-12"], ["Kody", "healer-male-3"], ["Liam", "healer-male-13"], ["Ryan", "archer-male-4"], ["Mikhail", "archer-male-2"]],
   shield: "3"
 }, microTeam = {
   name: "Microschool",
